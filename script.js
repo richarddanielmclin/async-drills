@@ -22,18 +22,18 @@ const done = () => {
 }
 
 const countdown = (num, callback) => {
-    
+
     setTimeout(() => {
-        
+
         if (num > 0) {
             console.log(num)
             countdown(num - 1, callback)
         } else {
             callback();
         }
-        
+
     }, 1000)
-    
+
 }
 
 const lunchTime = true
@@ -64,8 +64,5 @@ getWords()
 countdown(5, done)
 
 orderMeSomeFood()
-.then((value => {
-    console.log(value)
-})).catch((err => {
-    console.log(err)
-}))
+    .then(res => console.log(res))
+    .catch(err => console.error(err))
